@@ -14,6 +14,8 @@ export const networkNameMap: Record<Network, string> = {
   [Network.Kovan]: "ethereum",
   [Network.Polygon]: "polygon",
   [Network.Arbitrum]: "ethereum",
+  [Network.BSCTestnet]: "smartchain",
+  [Network.BSC]: "smartchain",
 };
 
 export async function getExistingMetadata(

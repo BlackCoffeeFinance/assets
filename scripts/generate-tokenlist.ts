@@ -28,7 +28,7 @@ import { getAddress } from "@ethersproject/address";
 const fleekConfig: FleekConfig = {
   apiKey: process.env.FLEEK_API_KEY ?? "",
   apiSecret: process.env.FLEEK_API_SECRET ?? "",
-  bucket: "balancer-team-bucket",
+  bucket: "b7aec615-c7d5-4fbe-be28-62d4d9f682aa-bucket",
 };
 
 let network: Network = process.argv[2] as Network;
@@ -132,10 +132,10 @@ async function generate(
   const date = new Date(dayTimestamp);
   const timestamp = date.toISOString();
   const list = {
-    name: "Balancer",
+    name: "Blackcoffee",
     timestamp,
     logoURI:
-      "https://raw.githubusercontent.com/balancer-labs/pebbles/master/images/pebbles-pad.256w.png",
+      "https://raw.githubusercontent.com/blackcoffee-labs/pebbles/master/images/pebbles-pad.256w.png",
     keywords: ["balancer", name],
     version: newVersion,
     tokens: tokens.sort((a, b) => (a.name > b.name ? 1 : -1)),
@@ -145,6 +145,8 @@ async function generate(
   await fs.writeFileSync(listFileName, JSON.stringify(list, null, 4));
 
   if (name === List.Untrusted || validateTokenList(list)) {
+    console.log('IPFS Pinning');
+
     try {
       await ipfsPin(
         `assets/${network}.${name}.tokenlist.json`,
@@ -153,7 +155,7 @@ async function generate(
       );
       console.log(`Tokenlist uploaded for ${name}`);
     } catch (e) {
-      console.log(e.message);
+      console.log("Error", e);
     }
   } else {
     throw Error("TokenList is invalid");

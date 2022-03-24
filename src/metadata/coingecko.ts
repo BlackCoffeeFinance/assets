@@ -2,6 +2,7 @@ import { getAddress } from "@ethersproject/address";
 import { TokenInfo } from "@uniswap/token-lists";
 import axios from "axios";
 import { Network } from "../types";
+import * as Net from "net";
 
 const coingeckoClient = axios.create({
   baseURL: "https://api.coingecko.com/api/v3",
@@ -12,6 +13,8 @@ const platformIdMap: Record<Network, string> = {
   [Network.Kovan]: "ethereum",
   [Network.Polygon]: "polygon-pos",
   [Network.Arbitrum]: "arbitrum-one",
+  [Network.BSC]: "binance-smart-chain",
+  [Network.BSCTestnet]: "binance-smart-chain",
 };
 
 export const getCoingeckoMetadata = async (

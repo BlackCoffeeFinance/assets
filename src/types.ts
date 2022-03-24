@@ -5,6 +5,8 @@ export enum Network {
   Kovan = "kovan",
   Polygon = "polygon",
   Arbitrum = "arbitrum",
+  BSCTestnet = 'bscTestnet',
+  BSC = 'bsc',
 }
 
 export enum List {
