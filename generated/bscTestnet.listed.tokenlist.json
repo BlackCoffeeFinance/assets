@@ -1,6 +1,6 @@
 {
     "name": "Blackcoffee",
-    "timestamp": "2022-03-26T00:00:00.000Z",
+    "timestamp": "2022-03-30T00:00:00.000Z",
     "logoURI": "https://raw.githubusercontent.com/blackcoffee-labs/pebbles/master/images/pebbles-pad.256w.png",
     "keywords": [
         "balancer",
@@ -9,16 +9,16 @@
     "version": {
         "major": 0,
         "minor": 2,
-        "patch": 2
+        "patch": 3
     },
     "tokens": [
         {
             "address": "0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee",
             "chainId": 97,
-            "name": "BUSD",
+            "name": "Binance-Peg BUSD",
             "symbol": "BUSD",
             "decimals": 18,
-            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56/logo.png"
+            "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56/logo.png"
         },
         {
             "address": "0x0DCc8CC0f177a6097BBbc590b13975a3fFe265B9",
